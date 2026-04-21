@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find a Pet - PawHome</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  background: #f5efe8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.filter-title {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Cards */
+.pet-card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.pet-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.tag {
+  border: 1px solid #ddd;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 2px;
+  display: inline-block;
+}
+
+.btn-adopt {
+  background: #c26b43;
+  color: white;
+  border-radius: 20px;
+}
+
+.btn-adopt:hover {
+  background: #a55532;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(45deg,#3d2b1f,#6b4f3f);
+  color: white;
+}
+
+/* NAV */
+.nav-link {
+  font-weight: 500;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR (CONNECTED TO INDEX) -->
+<nav class="navbar navbar-expand-lg bg-light py-3">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="index.html">🐾 PawHome</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation"></button>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#how">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#categories">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container py-5">
+  <div class="row">
+
+    <!-- FILTERS -->
+    <div class="col-md-3">
+      <div class="sidebar">
+        <h5>Filters</h5>
+
+        <p class="filter-title">Pet Type</p>
+
+        <div>
+          <input type="radio" name="type" id="dogs">
+          <label for="dogs">Dogs</label>
+        </div>
+
+        <div>
+          <input type="radio" name="type" id="cats">
+          <label for="cats">Cats</label>
+        </div>
+
+        <p class="filter-title">Size</p>
+
+        <div>
+          <input type="radio" name="size" id="small">
+          <label for="small">Small</label>
+        </div>
+
+        <div>
+          <input type="radio" name="size" id="medium">
+          <label for="medium">Medium</label>
+        </div>
+
+        <div>
+          <input type="radio" name="size" id="large">
+          <label for="large">Large</label>
+        </div>
+
+        <p class="filter-title">Gender</p>
+
+        <div>
+          <input type="radio" name="gender" id="male">
+          <label for="male">Male</label>
+        </div>
+
+        <div>
+          <input type="radio" name="gender" id="female">
+          <label for="female">Female</label>
+        </div>
+
+        <button class="btn btn-outline-secondary w-100 mt-3">Clear Filters</button>
+      </div>
+    </div>
+
+    <!-- PET LIST -->
+    <div class="col-md-9">
+
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4>All Pets</h4>
+        <input class="form-control w-50" placeholder="Search name or breed">
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card pet-card">
+            <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Buddy dog">
+            <div class="card-body">
+              <h5>Buddy</h5>
+              <p>Golden Retriever · 3 yrs</p>
+              <span class="tag">Friendly</span>
+              <span class="tag">Good w/ Kids</span>
+              <button class="btn btn-adopt w-100 mt-3">Adopt</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card pet-card">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Luna cat">
+            <div class="card-body">
+              <h5>Luna</h5>
+              <p>Tabby · 2 yrs</p>
+              <span class="tag">Calm</span>
+              <button class="btn btn-adopt w-100 mt-3">Adopt</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card pet-card">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="Cleo cat">
+            <div class="card-body">
+              <h5>Cleo</h5>
+              <p>Persian · 4 yrs</p>
+              <span class="tag">Cuddly</span>
+              <button class="btn btn-adopt w-100 mt-3">Adopt</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer py-4 text-center">
+  <p>© 2026 PawHome</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
