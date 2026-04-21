@@ -10,7 +10,7 @@
 
 <style>
 body {
-  background-color: #bb935f;
+  background-color: #d3a178d8;
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
 }
@@ -64,6 +64,19 @@ body {
 .section{
   background-color:  linear-gradient rgba(88, 59, 22, 0.473);
 }
+.btn-login {
+        border: 1px solid #c47a4a;
+        color: #c47a4a;
+        border-radius: 20px;
+        padding: 5px 15px;
+}
+
+.btn-signup {
+        background-color: #c47a4a;
+        color: white;
+        border-radius: 20px;
+        padding: 5px 15px;
+}
 </style>
 </head>
 
@@ -87,10 +100,10 @@ body {
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
       </ul>
 
-      <div>
-        <button class="btn btn-outline-secondary me-2">Log In</button>
-        <button class="btn btn-primary">Sign Up</button>
-      </div>
+        <div>
+        <button class="btn btn-login me-2">Log In</button>
+        <button class="btn btn-signup">Sign Up</button>
+        </div>
 
     </div>
   </div>
@@ -212,11 +225,11 @@ body {
 
 <!-- CATEGORIES -->
 <section class="container py-5 text-center" id="categories">
-  <h3 class="mb-4">Find your perfect companion</h3>
+  <h3 class="mb-4">Find your purrfect companion</h3>
 
   <div class="row g-3 justify-content-center">
-    <div class="col-md-2"><div class="cat-box">🐶 Dogs</div></div>
-    <div class="col-md-2"><div class="cat-box">🐱 Cats</div></div>
+    <div class="col-md-2"><div class="cat-box"><a href="categories.html">🐶 Dogs</a></div></div>
+    <div class="col-md-2"><div class="cat-box"><a href="categories.html">🐱 Cats</a></div></div>
   </div>
 </section>
 
@@ -231,7 +244,7 @@ body {
 <!-- CTA -->
 <section class="cta py-5 text-center">
   <div class="container">
-    <h3>Ready to find your forever friend?</h3>
+    <h3>Ready to find your forever furrends?</h3>
     <button class="btn btn-light mt-3">Sign Up Free</button>
   </div>
 </section>
