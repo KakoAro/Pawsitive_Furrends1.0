@@ -1,231 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Find a Pet - PawHome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Pet - PawHome</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-body {
-   background-color: #d3a178d8;
-  font-family: 'Segoe UI', sans-serif;
-}
-.btn-login {
-        border: 1px solid #c47a4a;
-        color: #c47a4a;
-        border-radius: 20px;
-        padding: 5px 15px;
+  <style>
+    body {
+      background-color: #d3a178d8;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-.btn-signup {
-        background-color: #c47a4a;
-        color: white;
-        border-radius: 20px;
-        padding: 5px 15px;
+    .btn-login {
+      border: 1px solid #c47a4a;
+      color: #c47a4a;
+      border-radius: 20px;
+      padding: 5px 15px;
     }
-/* Sidebar */
-.sidebar {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
 
-.filter-title {
-  font-weight: bold;
-  margin-top: 20px;
-}
+    .btn-signup {
+      background-color: #c47a4a;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 15px;
+    }
 
-/* Cards */
-.pet-card {
-  border-radius: 15px;
-  overflow: hidden;
-}
+    /* Sidebar */
+    .sidebar {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
 
-.pet-card img {
-  height: 180px;
-  object-fit: cover;
-}
+    .filter-title {
+      font-weight: bold;
+      margin-top: 20px;
+    }
 
-.tag {
-  border: 1px solid #ddd;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin: 2px;
-  display: inline-block;
-}
+    /* Cards */
+    .pet-card {
+      border-radius: 15px;
+      overflow: hidden;
+    }
 
-.btn-adopt {
-  background: #c26b43;
-  color: white;
-  border-radius: 20px;
-}
+    .pet-card img {
+      height: 180px;
+      object-fit: cover;
+    }
 
-.btn-adopt:hover {
-  background: #a55532;
-}
+    .tag {
+      border: 1px solid #ddd;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 2px;
+      display: inline-block;
+    }
 
-/* Footer */
-.footer {
-  background: linear-gradient(45deg,#3d2b1f,#6b4f3f);
-  color: white;
-}
+    .btn-adopt {
+      background: #c26b43;
+      color: white;
+      border-radius: 20px;
+    }
 
-/* NAV */
-.nav-link {
-  font-weight: 500;
-}
-</style>
+    .btn-adopt:hover {
+      background: #a55532;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(45deg, #3d2b1f, #6b4f3f);
+      color: white;
+    }
+
+    /* NAV */
+    .nav-link {
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background-color: #3e2c2a;
+      color: #ffd5b2;
+    }
+
+    .button-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .pet-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .pet-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(116, 55, 14, 0.303);
+    }
+  </style>
 
 </head>
 
 <body>
 
-<!-- NAVBAR (CONNECTED TO INDEX) -->
-<nav class="navbar navbar-expand-lg bg-light py-3">
-  <div class="container">
+  <!-- NAVBAR (CONNECTED TO INDEX) -->
+  <nav class="navbar navbar-expand-lg bg-light py-3">
+    <div class="container">
 
-    <a class="navbar-brand fw-bold" href="index.html">🐾 PawHome</a>
+      <a class="navbar-brand fw-bold" href="index.html">🐾 Pawsitive Furrends</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation"></button>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+        aria-label="Toggle navigation"></button>
+      </button>
 
-    <div class="collapse navbar-collapse" id="nav">
+      <div class="collapse navbar-collapse" id="nav">
 
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#how">How It Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#categories">Categories</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-      </ul>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#how">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        </ul>
 
-        <div>
-        <a href="login.html"><button class="btn btn-login me-2">Log In</button></a>
-        <a href="login.html"><button class="btn btn-signup">Sign In</button></a>
+        <div class="button-row">
+          <h4 style="font-size: 15px;">Communities</h4>
+          <a style="background-color: #2f2625;" href="https://www.facebook.com/share/g/18YgNFL66w/"
+            class="btn btn-primary me-2">Cats</a>
+          <a style="background-color: #ffd5b2; color: #2f2625;" href="https://www.facebook.com/share/g/1B3X1V3oV1/"
+            class="btn btn-outline-secondary">Dogs</a>
         </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container py-5">
+    <div class="row">
+
+      <!-- FILTERS -->
+      <div class="col-md-3">
+        <div class="sidebar">
+          <h5>Filters</h5>
+
+          <p class="filter-title">Pet Type</p>
+
+          <div>
+            <input type="radio" name="type" id="dogs">
+            <label for="dogs">Dogs</label>
+          </div>
+
+          <div>
+            <input type="radio" name="type" id="cats">
+            <label for="cats">Cats</label>
+          </div>
+
+          <p class="filter-title">Size</p>
+
+          <div>
+            <input type="radio" name="size" id="small">
+            <label for="small">Small</label>
+          </div>
+
+          <div>
+            <input type="radio" name="size" id="medium">
+            <label for="medium">Medium</label>
+          </div>
+
+          <div>
+            <input type="radio" name="size" id="large">
+            <label for="large">Large</label>
+          </div>
+
+          <p class="filter-title">Gender</p>
+
+          <div>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+          </div>
+
+          <div>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+          </div>
+
+          <button class="btn btn-outline-secondary w-100 mt-3">Clear Filters</button>
+        </div>
+      </div>
+
+      <!-- PET LIST -->
+      <div class="col-md-9">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h4>All Pets</h4>
+          <input id="petSearch" class="form-control w-50" placeholder="Search name or breed">
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-4 pet-item" data-type="dogs" data-size="large" data-gender="male">
+            <div class="card pet-card">
+              <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Buddy dog">
+              <div class="card-body">
+                <h5>Buddy</h5>
+                <p>Golden Retriever · 3 yrs</p>
+                <span class="tag">Friendly</span>
+                <span class="tag">Good w/ Kids</span>
+                <a href="adopt.html"><button class="btn btn-adopt w-100 mt-3" href>Adopt</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pet-item" data-type="cats" data-size="medium" data-gender="female">
+            <div class="card pet-card">
+              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Luna cat">
+              <div class="card-body">
+                <h5>Luna</h5>
+                <p>Tabby · 2 yrs</p>
+                <span class="tag">Calm</span>
+                <a href="adopt.html"><button class=" btn btn-adopt w-100 mt-3">Adopt</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pet-item" data-type="cats" data-size="small" data-gender="female">
+            <div class="card pet-card">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="Cleo cat">
+              <div class="card-body">
+                <h5>Cleo</h5>
+                <p>Persian · 4 yrs</p>
+                <span class="tag">Cuddly</span>
+                <a href="adopt.html"><button class="btn btn-adopt w-100 mt-3">Adopt</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pet-item" data-type="cats" data-size="large" data-gender="male">
+            <div class="card pet-card">
+              <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13" alt="pet">
+              <div class="card-body">
+                <h5>Rio</h5>
+                <p class="text-muted">Persian · 2 yrs</p>
+                <a href="adopt.html"><button class="btn btn-adopt w-100 mt-3">Adopt</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </div>
-</nav>
 
-<!-- CONTENT -->
-<div class="container py-5">
-  <div class="row">
+  <!-- FOOTER -->
+  <footer class="footer py-4 text-center">
+    <p>© 2026 PawHome</p>
+  </footer>
 
-    <!-- FILTERS -->
-    <div class="col-md-3">
-      <div class="sidebar">
-        <h5>Filters</h5>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-        <p class="filter-title">Pet Type</p>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const searchInput = document.getElementById('petSearch');
+      const radios = document.querySelectorAll('input[type="radio"]');
+      const pets = document.querySelectorAll('.pet-item');
+      const clearBtn = document.querySelector('.sidebar .btn-outline-secondary');
 
-        <div>
-          <input type="radio" name="type" id="dogs">
-          <label for="dogs">Dogs</label>
-        </div>
+      function filterPets() {
+        const searchText = searchInput.value.toLowerCase();
+        const type = document.querySelector('input[name="type"]:checked')?.id;
+        const size = document.querySelector('input[name="size"]:checked')?.id;
+        const gender = document.querySelector('input[name="gender"]:checked')?.id;
 
-        <div>
-          <input type="radio" name="type" id="cats">
-          <label for="cats">Cats</label>
-        </div>
+        pets.forEach(pet => {
+          // Get text from the card (h5 for name, p for breed)
+          const petName = pet.querySelector('h5').innerText.toLowerCase();
+          const petInfo = pet.querySelector('p').innerText.toLowerCase();
 
-        <p class="filter-title">Size</p>
+          // Check filters
+          const matchesSearch = petName.includes(searchText) || petInfo.includes(searchText);
+          const matchesType = !type || pet.dataset.type === type;
+          const matchesSize = !size || pet.dataset.size === size;
+          const matchesGender = !gender || pet.dataset.gender === gender;
 
-        <div>
-          <input type="radio" name="size" id="small">
-          <label for="small">Small</label>
-        </div>
+          // Show only if it matches EVERYTHING
+          if (matchesSearch && matchesType && matchesSize && matchesGender) {
+            pet.style.display = "block";
+          } else {
+            pet.style.display = "none";
+          }
+        });
+      }
 
-        <div>
-          <input type="radio" name="size" id="medium">
-          <label for="medium">Medium</label>
-        </div>
+      // Run filter when typing
+      searchInput.addEventListener('input', filterPets);
 
-        <div>
-          <input type="radio" name="size" id="large">
-          <label for="large">Large</label>
-        </div>
+      // Run filter when clicking radios
+      radios.forEach(radio => {
+        radio.addEventListener('change', filterPets);
+      });
 
-        <p class="filter-title">Gender</p>
-
-        <div>
-          <input type="radio" name="gender" id="male">
-          <label for="male">Male</label>
-        </div>
-
-        <div>
-          <input type="radio" name="gender" id="female">
-          <label for="female">Female</label>
-        </div>
-
-        <button class="btn btn-outline-secondary w-100 mt-3">Clear Filters</button>
-      </div>
-    </div>
-
-    <!-- PET LIST -->
-    <div class="col-md-9">
-
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h4>All Pets</h4>
-        <input class="form-control w-50" placeholder="Search name or breed">
-      </div>
-
-      <div class="row g-4">
-
-        <div class="col-md-4">
-          <div class="card pet-card">
-            <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Buddy dog">
-            <div class="card-body">
-              <h5>Buddy</h5>
-              <p>Golden Retriever · 3 yrs</p>
-              <span class="tag">Friendly</span>
-              <span class="tag">Good w/ Kids</span>
-              <button class="btn btn-adopt w-100 mt-3">Adopt</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card pet-card">
-            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Luna cat">
-            <div class="card-body">
-              <h5>Luna</h5>
-              <p>Tabby · 2 yrs</p>
-              <span class="tag">Calm</span>
-              <button class="btn btn-adopt w-100 mt-3">Adopt</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card pet-card">
-            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="Cleo cat">
-            <div class="card-body">
-              <h5>Cleo</h5>
-              <p>Persian · 4 yrs</p>
-              <span class="tag">Cuddly</span>
-              <button class="btn btn-adopt w-100 mt-3">Adopt</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer py-4 text-center">
-  <p>© 2026 PawHome</p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      // Reset everything
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = ''; // Clear search text
+        radios.forEach(r => r.checked = false);
+        pets.forEach(p => p.style.display = "block");
+      });
+    });
+  </script>
 
 </body>
+
+
+
 </html>

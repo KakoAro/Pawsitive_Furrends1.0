@@ -1,261 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PawHome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawsitive Furrends</title>
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-body {
-  background-color: #d3a178d8;
-  font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth;
-}
+  <style>
+    body {
+      background-color: #d3a178d8;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-.hero {
-  background-color: rgb(180, 177, 135);
-  transition: background-color 0.3s ease-in-out;
-  background: #f5efe8;
-  padding: 80px 0;
-  background-image: url(https://cdn.shopify.com/s/files/1/0817/7844/2548/files/rockcifer_1024x1024.webp?v=1732790207);
-}
-.hero:hover{
-  background-color: rgb(54, 50, 50);
-}
+    .hero {
+      background-color: rgb(180, 177, 135);
+      transition: background-color 0.3s ease-in-out;
+      background: #ffd5a5;
+      padding: 80px 0;
+      background-image: url(https://cdn.shopify.com/s/files/1/0817/7844/2548/files/rockcifer_1024x1024.webp?v=1732790207);
+      background-repeat: no-repeat;
+      background-position: 500px 0px;
 
-.hero-img {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+    }
 
-.pet-card img {
-  height: 200px;
-  object-fit: cover;
-}
+    .hero:hover {
+      background-color: #2f2625;
+    }
 
-.cat-box {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  background: #fafafa;
-  transition: 0.3s;
-  cursor: pointer;
-}
+    .hero-img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
-.cat-box:hover {
-  background: #f0f0f0;
-  transform: translateY(-5px);
-}
+    .pet-card img {
+      height: 200px;
+      object-fit: cover;
+    }
 
-.cta {
-  background: linear-gradient(45deg, #6b4f3f, #3d2b1f);
-  color: white;
-}
+    .cat-box {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #fafafa;
+      transition: 0.3s;
+      cursor: pointer;
+    }
 
-.nav-link {
-  font-weight: 500;
-  margin: 0 10px;
-}
-.section{
-  background-color:  linear-gradient rgba(88, 59, 22, 0.473);
-}
-.btn-login {
-        border: 1px solid #c47a4a;
-        color: #c47a4a;
-        border-radius: 20px;
-        padding: 5px 15px;
-}
+    .cat-box:hover {
+      background: #f0f0f0;
+      transform: translateY(-5px);
+    }
 
-.btn-signup {
-        background-color: #c47a4a;
-        color: white;
-        border-radius: 20px;
-        padding: 5px 15px;
-}
-</style>
+    .cta {
+      background: linear-gradient(45deg, #6b4f3f, #3d2b1f);
+      color: white;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      margin: 0 10px;
+    }
+
+    .section {
+      background-color: linear-gradient rgba(88, 59, 22, 0.473);
+    }
+
+    .btn-login {
+      border: 1px solid #c47a4a;
+      color: #c47a4a;
+      border-radius: 20px;
+      padding: 5px 15px;
+    }
+
+    .btn-signup {
+      background-color: #c47a4a;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 15px;
+    }
+
+    .btn-primary {
+      background-color: #2f2625;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #3e2c2a;
+      color: #ffd5b2;
+    }
+
+    .button-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .pet-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .pet-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(116, 55, 14, 0.303);
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-light py-3">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">🐾 PawHome</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🐾 Pawsitive Furrends</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="nav">
+      <div class="collapse navbar-collapse" id="nav">
 
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link" href="pets.html">Find a Pet</a></li>
-        <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-      </ul>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="pets.html">Find a Pet</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
 
-         <div>
-        <a href="login.html"><button class="btn btn-login me-2">Log In</button></a>
-        <a href="login.html"><button class="btn btn-signup">Sign In</button></a>
+        <div class="button-row">
+          <h4 style="font-size: 15px;">Communities</h4>
+          <a style="background-color: #2f2625;" href="https://www.facebook.com/share/g/18YgNFL66w/"
+            class="btn btn-primary me-2">Cats</a>
+          <a style="background-color: #ffd5b2; color: #2f2625;" href="https://www.facebook.com/share/g/1B3X1V3oV1/"
+            class="btn btn-outline-secondary">Dogs</a>
         </div>
 
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="row align-items-center">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div style="text-shadow: 0px 0px 3px #2f2625;" class="row align-items-center">
 
-      <div class="col-md-6">
-        <h1 class="fw-bold">
-          Give a pet their <span class="text-primary">forever</span> home today
-        </h1>
-        <p class="text-muted">
-          Thousands of loving animals are waiting for someone just like you.
-        </p>
+        <div style="background-color: #f2b31f; border-radius: 30px;" class="col-md-4">
+          <h1 style="color: #ffffff;" class="fw-bold mt-4">
+            Give a pet their <b style="color: #2f2625 ">forever</b> home today
+          </h1>
+          <p style="color: #ffffff">
+            Thousands of loving animals are waiting for someone just like you.
+          </p>
 
-        <!-- FIXED BUTTON -->
-        <a href="pets.html" class="btn btn-primary me-2">Find a Pet</a>
-        <a href="#how" class="btn btn-outline-secondary">Learn How</a>
+          <!-- FIXED BUTTON -->
+          <a style="background-color: #2f2625;" href="pets.html" class="btn btn-primary me-2">Find a Pet</a>
+          <a style="color: #ffffff;" href="#how" class="btn btn-outline-secondary">Learn How</a>
 
-        <div class="d-flex mt-4 gap-4">
-          <div><h5>8+</h5><small>Pets Available</small></div>
-          <div><h5>98%</h5><small>Success Rate</small></div>
-          <div><h5>3+</h5><small>Shelters</small></div>
+          <div style="color: #ffffff;" class="d-flex mb-4 mt-4 gap-4">
+            <div>
+              <h5>8+</h5><small>Pets Available</small>
+            </div>
+            <div>
+              <h5>98%</h5><small>Success Rate</small>
+            </div>
+            <div>
+              <h5>3+</h5><small>Shelters</small>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PETS -->
+  <section class="container py-5">
+    <h3 style="color:#2f2625" class="text-center mb-4">Animals within Tagum City looking for love</h3>
+
+    <div class="row g-4">
+
+      <div class="col-md-3">
+        <div class="card pet-card">
+          <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="pet">
+          <div class="card-body">
+            <h5>Buddy</h5>
+            <p class="text-muted">Golden Retriever · 3 yrs</p>
+            <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-6 text-center">
-        <img src="https://media.istockphoto.com/id/451627799/photo/close-up-german-shepard-laying-next-to-cat.jpg?s=612x612&w=0&k=20&c=8S-tva5SzzA6Lvpgcf0F5IWgeW3pLMxdl7DIQSIkYx4=" class="hero-img" alt="pet">
+      <div class="col-md-3">
+        <div class="card pet-card">
+          <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="pet">
+          <div class="card-body">
+            <h5>Luna</h5>
+            <p class="text-muted">Tabby Cat · 2 yrs</p>
+            <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card pet-card">
+          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="pet">
+          <div class="card-body">
+            <h5>Cleo</h5>
+            <p class="text-muted">Persian · 4 yrs</p>
+            <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card pet-card">
+          <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13" alt="pet">
+          <div class="card-body">
+            <h5>Rio</h5>
+            <p class="text-muted">Persian · 2 yrs</p>
+            <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
+          </div>
+        </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SEARCH -->
-<section class="container my-4" id="pets">
-  <div class="card p-3 shadow-sm">
-    <div class="row g-2">
-      <div class="col-md"><input class="form-control" placeholder="Pet Type"></div>
-      <div class="col-md"><input class="form-control" placeholder="Breed"></div>
-      <div class="col-md"><input class="form-control" placeholder="Age"></div>
-      <div class="col-md"><input class="form-control" placeholder="Size"></div>
-      <div class="col-md-auto">
-        <button class="btn btn-primary w-100">Search</button>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- HOW IT WORKS -->
+  <section class="bg-light py-5" id="how">
+    <div class="container text-center">
+      <h3 class="mb-4">How adoption works</h3>
 
-<!-- PETS -->
-<section class="container py-5">
-  <h3 class="text-center mb-4">Animals looking for love</h3>
-
-  <div class="row g-4">
-
-    <div class="col-md-3">
-      <div class="card pet-card">
-        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="pet">
-        <div class="card-body">
-          <h5>Buddy</h5>
-          <p class="text-muted">Golden Retriever · 3 yrs</p>
-          <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
+      <div class="row">
+        <div class="col-md-3">
+          <h5>1. Browse</h5>
+          <p>Find your pet</p>
+        </div>
+        <div class="col-md-3">
+          <h5>2. Apply</h5>
+          <p>Submit form</p>
+        </div>
+        <div class="col-md-3">
+          <h5>3. Connect</h5>
+          <p>Contact shelter</p>
+        </div>
+        <div class="col-md-3">
+          <h5>4. Adopt</h5>
+          <p>Bring home</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="col-md-3">
-      <div class="card pet-card">
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="pet">
-        <div class="card-body">
-          <h5>Luna</h5>
-          <p class="text-muted">Tabby Cat · 2 yrs</p>
-          <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
-        </div>
+  <!-- CATEGORIES -->
+  <section class="container py-5 text-center" id="categories">
+    <h3 class="mb-4">Find your purrfect companion</h3>
+
+    <div class="row g-3 justify-content-center">
+      <div class="col-md-2">
+        <div class="cat-box"><a href="categories.html">🐶 Dogs</a></div>
+      </div>
+      <div class="col-md-2">
+        <div class="cat-box"><a href="categories.html">🐱 Cats</a></div>
       </div>
     </div>
+  </section>
 
-    <div class="col-md-3">
-      <div class="card pet-card">
-        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="pet">
-        <div class="card-body">
-          <h5>Cleo</h5>
-          <p class="text-muted">Persian · 4 yrs</p>
-          <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
-        </div>
-      </div>
+  <!-- ABOUT -->
+  <section class="container py-5 text-center" id="about">
+    <h3>About PawHome</h3>
+    <p class="text-muted">
+      PawHome connects loving animals with families. Every adoption saves a life.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta py-5 text-center">
+    <div class="container">
+      <h3>Ready to find your forever furrends?</h3>
+      <button class="btn btn-light mt-3">Sign Up Free</button>
     </div>
+  </section>
 
-    <div class="col-md-3">
-      <div class="card pet-card">
-        <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13" alt="pet">
-        <div class="card-body">
-          <h5>Rio</h5>
-          <p class="text-muted">Parrot · 2 yrs</p>
-          <a href="pets.html"><button class="btn btn-primary w-100">Adopt</button></a>
-        </div>
-      </div>
-    </div>
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-4 text-center">
+    <p>© 2026 PawHome. Made with ❤️</p>
+  </footer>
 
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="bg-light py-5" id="how">
-  <div class="container text-center">
-    <h3 class="mb-4">How adoption works</h3>
-
-    <div class="row">
-      <div class="col-md-3"><h5>1. Browse</h5><p>Find your pet</p></div>
-      <div class="col-md-3"><h5>2. Connect</h5><p>Contact shelter</p></div>
-      <div class="col-md-3"><h5>3. Apply</h5><p>Submit form</p></div>
-      <div class="col-md-3"><h5>4. Adopt</h5><p>Bring home</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CATEGORIES -->
-<section class="container py-5 text-center" id="categories">
-  <h3 class="mb-4">Find your purrfect companion</h3>
-
-  <div class="row g-3 justify-content-center">
-    <div class="col-md-2"><div class="cat-box"><a href="categories.html">🐶 Dogs</a></div></div>
-    <div class="col-md-2"><div class="cat-box"><a href="categories.html">🐱 Cats</a></div></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="container py-5 text-center" id="about">
-  <h3>About PawHome</h3>
-  <p class="text-muted">
-    PawHome connects loving animals with families. Every adoption saves a life.
-  </p>
-</section>
-
-<!-- CTA -->
-<section class="cta py-5 text-center">
-  <div class="container">
-    <h3>Ready to find your forever furrends?</h3>
-    <button class="btn btn-light mt-3">Sign Up Free</button>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-dark text-white py-4 text-center">
-  <p>© 2026 PawHome. Made with ❤️</p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

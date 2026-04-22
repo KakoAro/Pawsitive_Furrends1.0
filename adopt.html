@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption / Fostering Form</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-image: linear-gradient(#f2b31f00, #8e6300), url("ht1jfGh.gif");
+            background-size: cover;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #2f2625;
+        }
+
+        .container {
+            max-width: 600px;
+            background: #ffd5b2d8;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1{
+            font-size: 60px; 
+            color: #2f2625; 
+            margin-right: 30px;
+            transition: 0.5s;
+        }
+
+        h1:hover{
+            color: #db9d56;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(60, 41, 17);
+            font-weight: bold;
+        }
+
+        label {
+            color: rgb(60, 41, 17);
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 98%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        select {
+            width: 100px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 50%;
+            padding: 10px;
+            background: #50310d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        button:hover {
+            background: #db9d56;
+            border-radius: 30px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-container input {
+            margin-top: 4px;
+            width: auto;
+        }
+
+        /* Modal Background Overlay */
+        .modal-overlay {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            /* Dims the screen */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The Modal Box */
+        .modal-content {
+            background: #ffd5b2;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid #50310d;
+        }
+
+        .modal-content h3 {
+            color: #50310d;
+            margin-bottom: 15px;
+        }
+
+        .modal-content button {
+            width: 100px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+   <div style="background-color: #f2b31f; border-radius: 30px; width: 700px;" class="col-md-4 mb-4 mt-3">
+    <h1 class="fw-bold mt-4 mb-4" href="index.html">🐾 Pawsitive Furrends </h1>
+   </div>
+
+    <div class="container">
+        <h2>Adoption / Fostering Form</h2>
+
+        <form action="#" method="POST">
+
+            <label>Full Name</label>
+            <input type="text" name="fullname" required>
+
+            <label>Age</label>
+            <input type="number" name="age" required>
+
+            <label>Address</label>
+            <input type="text" name="address" required>
+
+            <label>Contact Number</label>
+            <input type="text" name="contact" required>
+
+            <label>Email (optional)</label>
+            <input type="email" name="email">
+
+            <label>Type of Request</label>
+            <select name="request_type" required>
+                <option value="Adopt">Adopt</option>
+                <option value="Foster">Foster</option>
+            </select>
+
+            <label>Why do you want to adopt/foster this animal?</label>
+            <textarea name="reason" rows="4" required></textarea>
+
+            <label>Do you currently own pets?</label>
+            <select name="pets" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Type of Home</label>
+            <select name="home_type" required>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+            </select>
+
+            <label>Do you have permission from household?</label>
+            <select name="permission" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label class="checkbox-container" style="font-size: 15px;">
+                <input type="checkbox" required>
+                <span>I confirm that the information provided is true and I understand approval depends on shelter
+                    review.</span>
+            </label>
+
+            <button type="submit">Submit Application</button>
+
+        </form>
+    </div>
+
+    <div id="thankYouModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Thank You! 🐾</h3>
+            <p>Your application has been submitted successfully. Our team will review your information and contact you
+                soon.</p>
+            <button onclick="closeModal()">Go to Homepage</button>
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        const modal = document.getElementById('thankYouModal');
+
+        // 1. Handle Form Submission
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevents the page from refreshing
+            modal.style.display = 'flex'; // Shows the modal
+            form.reset(); // Clears the form fields
+        });
+
+        // 2. Function to close the modal AND redirect
+        function closeModal() {
+            // This line sends the user back to your homepage
+            window.location.href = "index.html";
+        }
+    </script>
+
+
+</body>
+
+</html>
